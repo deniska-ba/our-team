@@ -1,0 +1,215 @@
+@import "normalize";
+@import "layout";
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500|Roboto:400,900');
+
+$primary: #ffcc00;
+$primary-font: "Raleway", sans-serif;
+$heading-font: "Roboto", sans-serif;
+
+body{
+	font: 500 14px/1.7 "Raleway", sans-serif;
+	color: #333;
+}
+
+
+
+/* Layout */
+.ba-container{
+	padding-left: 15px;
+	padding-right: 15px;
+	max-width: 1170px;
+}
+h1, h2,h3,h4,h5,h6 {
+	font-weight: 900;
+	font-family: $heading-font;
+	line-height: 1.2;
+}
+
+
+/* Typography */
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button{
+	display: inline-block;
+}
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.ba-button:hover{
+
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+
+	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+
+}
+textarea {
+
+}
+.ba-team {
+	padding: 110px 0;
+	text-align: center;
+	&__title {
+		text-transform: uppercase;
+		font-size: 60px;
+		color: $primary;
+		margin: 0 0 48px;
+		position: relative;
+		&:after{
+			content: "";
+			display: block;
+			width: 450px;
+			height: 1px;
+			background: $primary;
+			margin: 24px auto 0;
+		}
+		&:before{
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			background: #fff url(../img/bonfire.svg) 50% no-repeat;
+			height: 20px;
+			width: 40px;
+			transform: translate(-50%, 50%);
+		}
+	}
+
+	&__subtitle {
+		font-family: $primary-font;
+		letter-spacing: .02em;
+		text-transform: uppercase;
+		font-size: 18px;
+		font-weight: 500;
+		color: #898f8f;
+		margin: 0;
+	}
+}
+.ba-team-slider {
+	display: flex;
+	&__image, &__content{
+		flex: 1  1 50%;
+	}
+
+	&__image {
+		padding: 0 68px 0 83px;
+		display: flex;
+		align-items: center;
+		img {
+			border: 1px solid $primary;
+			display: block;
+			box-shadow: 105px 0 0 -85px #fff,
+			-105px 0 0 -85px #fff,
+			0 105px 0 -85px #fff,
+			0 -105px 0 -85px #fff;
+		}
+	}
+	&__image-border {
+		border: 1px solid $primary;
+		padding: 15px;
+	}
+
+	&__content {
+		border-left: 1px solid $primary;
+		padding: 90px 68px 70px 83px ;
+		& .ba-team__position {
+			font-size: 24px;
+			color: #666666;
+			margin-top: 0;
+		}
+		& .ba-button {
+			font-family: $heading-font;
+			text-decoration: none;
+			font-weight: 900;
+			text-transform: uppercase;
+			color: #666666;
+			border: 2px solid $primary;
+			padding: 0 13px 0 13px;
+
+		}
+		& .ba-name {
+			margin-bottom: 0;
+			&:after {
+				content: "";
+				display: block;
+				width: 50px;
+				height: 4px;
+				background: $primary;
+				margin: 0 auto;
+				margin-top: 20px;
+				margin-bottom: 25px;
+			}
+		}
+
+		h3 {
+			font-family: $heading-font;
+			font-size: 36px;
+			font-weight: 400;
+			letter-spacing: 0.02em;
+			color: #666;
+			line-height: 1.5;
+			margin: 0;
+			&:after {
+				content: "";
+				display: block;
+				width: 100px;
+				height: 1px;
+				background: $primary;
+				text-align: center;
+				margin: 0 auto;
+				margin-top: 30px;
+				margin-bottom: 30px;
+			}
+
+		}
+	}
+}
+.ba-socials {
+	a {
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		color: #ccc;
+		border: 2px solid currentColor;
+		border-radius: 50%;
+		text-align: center;
+		padding: 3.5px;
+		&:hover {
+			color: $primary;
+		}
+		svg {
+			display: inline-block;
+			height: 70%;
+			width: 70%;
+			fill: currentColor;
+		}
+	}
+}
+
